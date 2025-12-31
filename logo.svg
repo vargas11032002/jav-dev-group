@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <!-- Definir colores exactos -->
+    <style>
+      .blue-j { fill: #3F51B5; }
+      .orange-a { fill: #FF9800; }
+      .teal-v { fill: #009688; }
+      .black-text { fill: #1a1a1a; font-family: 'Arial Black', sans-serif; }
+      .gray-text { fill: #666; font-family: Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- J en azul -->
+  <text x="193" y="185" class="blue-j" font-size="120" font-weight="900" font-family="'Arial Black', sans-serif">J</text>
+  
+  <!-- A en naranja con símbolo de código -->
+  <g>
+    <text x="253" y="185" class="orange-a" font-size="120" font-weight="900" font-family="'Arial Black', sans-serif">A</text>
+    <!-- Símbolos <A> dentro de la A -->
+    <text x="265" y="165" fill="white" font-size="32" font-weight="bold" font-family="monospace">&lt;/&gt;</text>
+  </g>
+  
+  <!-- V en verde/teal -->
+  <text x="318" y="185" class="teal-v" font-size="120" font-weight="900" font-family="'Arial Black', sans-serif">V</text>
+  
+  <!-- Texto "J.A.V. DEV GROUP" -->
+  <text x="250" y="245" class="black-text" font-size="32" font-weight="900" text-anchor="middle" letter-spacing="3">J.A.V. DEV GROUP</text>
+  
+  <!-- Texto "Dev Group" -->
+  <text x="250" y="275" class="gray-text" font-size="18" font-weight="400" text-anchor="middle" letter-spacing="2">Dev Group</text>
+</svg>
