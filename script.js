@@ -1,4 +1,4 @@
-// --- 1. Generador de partículas suave ---
+// --- 1. Generador de partículas ---
 const particlesContainer = document.getElementById('particles');
 
 function initParticles() {
@@ -21,7 +21,7 @@ function initParticles() {
     }
 }
 
-// --- 2. Control del Header y Animación Reveal ---
+// --- 2. Control de Animación Reveal y Header ---
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
     const windowHeight = window.innerHeight;
@@ -34,13 +34,14 @@ function reveal() {
         }
     });
 
-    // Control del Header
     const header = document.getElementById('header');
-    header.classList.toggle('scrolled', window.scrollY > 50);
+    if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    }
 }
 
-// --- 3. Contador de estadísticas optimizado ---
-let started = false; // Para que solo se ejecute una vez
+// --- 3. Contador de estadísticas (6 Meses / Clientes Reales) ---
+let started = false;
 
 function animateNumbers() {
     const statsSection = document.querySelector('.stats');
@@ -49,7 +50,6 @@ function animateNumbers() {
     const pos = statsSection.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    // Si la sección es visible y no ha empezado la animación
     if (pos < windowHeight - 100 && !started) {
         started = true;
         const stats = document.querySelectorAll('.stat-number');
@@ -58,14 +58,23 @@ function animateNumbers() {
             const target = +stat.getAttribute('data-target');
             let count = 0;
             const updateCount = () => {
-                const speed = 100; // Ajusta velocidad
+                const speed = 50; 
                 const inc = target / speed;
                 if (count < target) {
                     count += inc;
                     stat.innerText = Math.ceil(count);
-                    setTimeout(updateCount, 20);
+                    setTimeout(updateCount, 25);
                 } else {
-                    stat.innerText = target + (target === 100 ? "%" : "+");
+                    // Sufijos personalizados para J.A.V. Dev Group
+                    if (target === 6) {
+                        stat.innerText = "6 Meses";
+                    } else if (target === 100) {
+                        stat.innerText = "100%";
+                    } else if (target === 4) {
+                        stat.innerText = "4 Proyectos";
+                    } else {
+                        stat.innerText = target + "+";
+                    }
                 }
             };
             updateCount();
@@ -81,5 +90,14 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     initParticles();
-    reveal(); // Para mostrar lo que ya está en pantalla al cargar
+    reveal();
+    
+    // Toggle Menú Móvil
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
 });
