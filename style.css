@@ -331,3 +331,64 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+/* --- ESTILO DE CLIENTES --- */
+.clients-section {
+    padding: 60px 5%;
+    background: rgba(255, 255, 255, 0.01);
+    text-align: center;
+}
+
+.clients-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.client-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s ease;
+    filter: grayscale(100%); /* Blanco y negro por defecto */
+    opacity: 0.6;
+}
+
+.client-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.client-logo span {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER: Vuelve el color y sube un poco */
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.client-logo:hover img {
+    transform: scale(1.1);
+}
+
+.client-logo:hover span {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .clients-container { gap: 30px; }
+    .client-logo img { height: 40px; }
+}
