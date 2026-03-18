@@ -45,7 +45,7 @@
 
     <div class="wave-container">
         <div class="wave"></div>
-        <div class="wave"></div>
+        <div class="wave.two"></div>
     </div>
 
     <header id="header">
@@ -55,9 +55,7 @@
                 <span class="logo-text">J.A.V. DEV GROUP</span>
             </div>
             <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <ul id="navMenu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -72,33 +70,22 @@
     <section id="inicio" class="hero">
         <div class="code-bg">
             <div class="code-line">
-                &lt;?php<br>
-                &nbsp;&nbsp;class Innovation {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;function transform($ideas) {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this-&gt;digital($ideas);<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;?&gt;<br><br>
-                const innovate = () =&gt; {<br>
-                &nbsp;&nbsp;return transform(ideas);<br>
-                };<br><br>
-                def create_future(vision):<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;return build(vision)<br>
+                &lt;?php class Innovation { function transform($ideas) { return $this-&gt;digital($ideas); } } ?&gt;<br><br>
+                const innovate = () =&gt; transform(ideas);<br><br>
+                def create_future(vision): return build(vision)
             </div>
         </div>
         <div class="hero-content">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232196F3;stop-opacity:1'/%3E%3Cstop offset='50%25' style='stop-color:%234CAF50;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23FF9800;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='150,80 220,200 80,200' fill='%232196F3' opacity='0.9'/%3E%3Cpolygon points='220,80 290,200 150,200' fill='%234CAF50' opacity='0.9'/%3E%3Cpolygon points='290,80 360,200 220,200' fill='%23FF9800' opacity='0.9'/%3E%3Ctext x='40' y='140' font-size='90' font-weight='bold' fill='url(%23g1)'%3EJAV%3C/text%3E%3Ctext x='40' y='190' font-size='35' fill='white' font-weight='600'%3EDEV GROUP%3C/text%3E%3Ctext x='40' y='230' font-size='18' fill='%234CAF50' font-style='italic'%3EDesarrollo ágil para mentes innovadoras%3C/text%3E%3Ccircle cx='420' cy='100' r='50' fill='none' stroke='%234CAF50' stroke-width='3' opacity='0.3'/%3E%3Crect x='400' y='180' width='60' height='60' fill='none' stroke='%232196F3' stroke-width='3' opacity='0.3' transform='rotate(45 430 210)'/%3E%3Cpath d='M 80 250 L 120 250 M 100 230 L 100 270' stroke='%23FF9800' stroke-width='4' opacity='0.4'/%3E%3C/svg%3E" alt="J.A.V. Dev Group" class="hero-logo">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232196F3;stop-opacity:1'/%3E%3Cstop offset='50%25' style='stop-color:%234CAF50;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23FF9800;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='150,80 220,200 80,200' fill='%232196F3' opacity='0.9'/%3E%3Cpolygon points='220,80 290,200 150,200' fill='%234CAF50' opacity='0.9'/%3E%3Cpolygon points='290,80 360,200 220,200' fill='%23FF9800' opacity='0.9'/%3E%3Ctext x='40' y='140' font-size='90' font-weight='bold' fill='url(%23g1)'%3EJAV%3C/text%3E%3Ctext x='40' y='190' font-size='35' fill='white' font-weight='600'%3EDEV GROUP%3C/text%3E%3C/svg%3E" alt="J.A.V. Dev Group" class="hero-logo">
             <h1 class="glitch">J.A.V. DEV GROUP</h1>
             <p class="tagline">Desarrollo ágil para mentes innovadoras</p>
             <p class="hero-description">Transformamos tus ideas en soluciones digitales de alto impacto. Especialistas en desarrollo móvil, plataformas web y automatización con IA.</p>
             <div class="cta-buttons">
                 <a href="https://wa.me/573106876100" class="cta-button" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>Contáctanos por WhatsApp</span>
+                    <i class="fab fa-whatsapp"></i> <span>WhatsApp Directo</span>
                 </a>
                 <a href="#servicios" class="cta-button secondary">
-                    <i class="fas fa-rocket"></i>
-                    <span>Ver Servicios</span>
+                    <i class="fas fa-rocket"></i> <span>Nuestros Servicios</span>
                 </a>
             </div>
         </div>
@@ -108,36 +95,12 @@
         <h2 class="carousel-title reveal">Tecnologías que Dominamos</h2>
         <div class="carousel-container">
             <div class="carousel-track">
-                <div class="tech-card">
-                    <div class="tech-icon">🚀</div>
-                    <h4>React & React Native</h4>
-                    <p>Sun Tech & Tout App</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">🤖</div>
-                    <h4>AI Chatbots</h4>
-                    <p>Asonet Colombia</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">⚡</div>
-                    <h4>Node.js</h4>
-                    <p>Backend robusto</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">🎨</div>
-                    <h4>UI/UX Design</h4>
-                    <p>Experiencias increíbles</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">☁️</div>
-                    <h4>Cloud Services</h4>
-                    <p>AWS & Azure</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon">🚀</div>
-                    <h4>React & React Native</h4>
-                    <p>Apps Móviles</p>
-                </div>
+                <div class="tech-card"><h4>React Native</h4><p>Apps Móviles</p></div>
+                <div class="tech-card"><h4>AI Chatbots</h4><p>Asonet Colombia</p></div>
+                <div class="tech-card"><h4>Node.js</h4><p>Backend Seguro</p></div>
+                <div class="tech-card"><h4>UI/UX</h4><p>Diseño Pro</p></div>
+                <div class="tech-card"><h4>AWS Cloud</h4><p>Escalabilidad</p></div>
+                <div class="tech-card"><h4>React Native</h4><p>Apps Móviles</p></div>
             </div>
         </div>
     </section>
@@ -146,24 +109,22 @@
         <div class="section-content">
             <h2 class="section-title reveal">Sobre Nosotros</h2>
             <p class="section-subtitle reveal">6 meses transformando visiones en realidades digitales</p>
-            
-            <p class="reveal">En J.A.V. Dev Group, liderada por Jhon Alexander Vargas, creemos que el software es el motor de la innovación. En nuestro corto pero intenso recorrido de <strong>6 meses</strong>, hemos consolidado casos de éxito en sectores diversos, desde el retail tecnológico con <strong>Sun Tech</strong> hasta el sector servicios con <strong>Asonet Colombia SAS</strong>.</p>
-            
+            <p class="reveal">En J.A.V. Dev Group, liderada por Jhon Alexander Vargas, creemos que el software es el motor de la innovación. En nuestro recorrido de <strong>6 meses</strong>, hemos consolidado casos de éxito en sectores diversos, desde el retail tecnológico con <strong>Sun Tech</strong> hasta el sector servicios con <strong>Asonet Colombia SAS</strong>.</p>
             <div class="why-us">
                 <div class="why-card reveal">
                     <span class="icon-emoji">⚡</span>
-                    <h3>Agilidad real</h3>
-                    <p>Entregas rápidas y constantes como lo demostramos en el despliegue de <strong>Tout App</strong>.</p>
+                    <h3>Agilidad Real</h3>
+                    <p>Entregas rápidas y constantes como lo demostramos en <strong>Tout App</strong>.</p>
                 </div>
                 <div class="why-card reveal">
                     <span class="icon-emoji">❤️</span>
-                    <h3>Enfoque en el usuario</h3>
+                    <h3>Usuario Primero</h3>
                     <p>Creamos interfaces intuitivas que facilitan la vida del cliente final.</p>
                 </div>
                 <div class="why-card reveal">
                     <span class="icon-emoji">🌎</span>
                     <h3>Crecimiento Local</h3>
-                    <p>Desde Garzón para el mundo, elevando el estándar tecnológico regional.</p>
+                    <p>Desde Garzón para el mundo, elevando el estándar tecnológico.</p>
                 </div>
             </div>
         </div>
@@ -176,76 +137,85 @@
                 <div class="stat-label">Proyectos Completados</div>
             </div>
             <div class="stat-card reveal">
-                <div class="stat-number" data-target="100">0</div>
-                <div class="stat-label">% Satisfacción</div>
-            </div>
-            <div class="stat-card reveal">
                 <div class="stat-number" data-target="6">0</div>
                 <div class="stat-label">Meses de Experiencia</div>
             </div>
             <div class="stat-card reveal">
-                <div class="stat-number" data-target="3">0</div>
-                <div class="stat-label">Clientes Felices</div>
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-label">% Satisfacción</div>
             </div>
         </div>
     </section>
 
     <section id="servicios" class="services">
         <h2 class="section-title reveal">Nuestros Servicios</h2>
-        <p class="section-subtitle reveal">Soluciones tecnológicas comprobadas en el mercado</p>
-        
         <div class="services-grid">
             <div class="service-card reveal">
                 <span class="service-icon">📱</span>
                 <h3>Apps Móviles</h3>
-                <p>Desarrollo nativo e híbrido. Creadores de la plataforma <strong>Tout App</strong> de delivery y la aplicación operativa para <strong>Sun Tech</strong>.</p>
+                <p>Desarrollo nativo e híbrido. Creadores de <strong>Tout App</strong> y la aplicación operativa para <strong>Sun Tech</strong>.</p>
             </div>
-
             <div class="service-card reveal">
                 <span class="service-icon">🌐</span>
                 <h3>Desarrollo Web</h3>
-                <p>Sitios de alto rendimiento y SEO. Visita nuestro proyecto web en <a href="https://suntchcol.vercel.app/" target="_blank" style="color:var(--secondary); text-decoration: none;">Sun Tech Colombia</a>.</p>
+                <p>Sitios de alto rendimiento y SEO. Visita nuestro proyecto en <a href="https://suntchcol.vercel.app/" target="_blank">Sun Tech Colombia</a>.</p>
             </div>
-
             <div class="service-card reveal">
                 <span class="service-icon">🤖</span>
                 <h3>IA & Automatización</h3>
-                <p>Implementación de Chatbots inteligentes y flujos de trabajo automáticos, como el desarrollado para <strong>Asonet Colombia SAS</strong>.</p>
+                <p>Implementación de Chatbots inteligentes y flujos de trabajo, como el de <strong>Asonet Colombia SAS</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-section">
+        <h2 class="section-title reveal">Empresas que confían en nosotros</h2>
+        <div class="clients-container reveal">
+            <a href="https://suntchcol.vercel.app/" target="_blank" class="client-logo">
+                <div class="logo-wrapper">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHwRs8x5mNuZhkMh2G6GM1sDcNm3OO6uDxZeN32nohRw&s&ec=121585071" alt="Sun Tech">
+                </div>
+                <span>Sun Tech</span>
+            </a>
+            <div class="client-logo">
+                <div class="logo-wrapper">
+                    <img src="https://asonet.com.co/wp-content/uploads/2023/07/logoasonet-removebg-preview.png" alt="Asonet">
+                </div>
+                <span>Asonet Colombia</span>
+            </div>
+            <div class="client-logo">
+                <div class="logo-wrapper">
+                    <img src="https://cdn.pixabay.com/photo/2014/03/25/16/58/shopping-cart-297750_1280.png" alt="Tout App">
+                </div>
+                <span>Tout App</span>
             </div>
         </div>
     </section>
 
     <section id="testimonios" class="testimonials">
         <h2 class="section-title reveal">Lo que dicen nuestros clientes</h2>
-        <p class="section-subtitle reveal">Confianza respaldada por resultados reales</p>
-        
         <div class="testimonial-grid">
             <div class="testimonial-card reveal">
                 <p class="testimonial-text">"La integración del Chatbot de IA ha optimizado nuestra atención al cliente de manera increíble. Un socio tecnológico de confianza."</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">GA</div>
                     <div class="author-info">
                         <h4>Gerente General</h4>
                         <p>Asonet Colombia SAS</p>
                     </div>
                 </div>
             </div>
-
             <div class="testimonial-card reveal">
-                <p class="testimonial-text">"J.A.V. Dev Group transformó nuestra visión en una aplicación móvil y web excepcional para Sun Tech. Rapidez y calidad técnica."</p>
+                <p class="testimonial-text">"JAV Dev Group transformó nuestra visión en una aplicación móvil y web excepcional para Sun Tech. Rapidez y calidad técnica."</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">ST</div>
                     <div class="author-info">
                         <h4>Dirección Técnica</h4>
                         <p>Sun Tech Colombia</p>
                     </div>
                 </div>
             </div>
-
             <div class="testimonial-card reveal">
                 <p class="testimonial-text">"Tout App es hoy una realidad gracias a su capacidad de desarrollo ágil. Entendieron perfectamente el modelo de negocio delivery."</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">TA</div>
                     <div class="author-info">
                         <h4>Fundador</h4>
                         <p>Tout App Comidas</p>
@@ -256,41 +226,27 @@
     </section>
 
     <footer id="contacto">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 100'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%234CAF50;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%232196F3;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF9800;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='10' y='55' font-size='50' font-weight='bold' fill='url(%23grad2)'%3EJAV%3C/text%3E%3Ctext x='10' y='85' font-size='22' fill='white' font-weight='600'%3EDEV GROUP%3C/text%3E%3C/svg%3E" alt="J.A.V. Dev Group" class="footer-logo">
-                    <p>Desarrollo ágil para mentes innovadoras</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <a href="#inicio">Inicio</a>
-                    <a href="#nosotros">Sobre Nosotros</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#testimonios">Testimonios</a>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contáctanos</h3>
-                    <p><i class="fas fa-phone"></i> +57 310 687 6100</p>
-                    <p><i class="fas fa-envelope"></i> contacto@javdevgroup.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Garzon-huila, Colombia</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Síguenos</h3>
-                    <div class="social-links">
-                        <a href="https://wa.me/573106876100" class="social-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn github"><i class="fab fa-github"></i></a>
-                    </div>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>JAV DEV GROUP</h3>
+                <p>Desarrollo ágil para mentes innovadoras. Impulsando el futuro desde Colombia.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fab fa-whatsapp"></i> +57 310 687 6100</p>
+                <p><i class="fas fa-envelope"></i> alexander-vargas2011@hotmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Garzón - Huila, Colombia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes</h3>
+                <div class="social-links">
+                    <a href="https://wa.me/573106876100" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-
-            <div class="copyright">
-                <p>&copy; 2025 J.A.V. Dev Group. Hecho con ❤️ en Colombia.</p>
-            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 J.A.V. Dev Group. Hecho con ❤️ en Colombia.</p>
         </div>
     </footer>
 
