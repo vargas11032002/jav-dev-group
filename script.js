@@ -1,55 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+    const contactForm = document.getElementById('mainContactForm');
 
-    // Lógica Hamburguesa
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Obtener valores de los campos
+        const nombre = document.getElementById('nombre').value;
+        const empresa = document.getElementById('empresa').value || 'Particular';
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        // Construir mensaje de WhatsApp
+        const phone = "573138932217";
+        const text = `Hola J.A.V. Dev Group! Mi nombre es ${nombre} de la empresa ${empresa}. Mi correo es ${email} y me gustaría consultar por: ${mensaje}`;
+        
+        // Codificar el texto para URL
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+        // Redirigir a WhatsApp
+        window.open(whatsappUrl, '_blank');
     });
 
-    // Cerrar al clickear link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
+    // Efecto de scroll suave para la navegación
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
-
-    // Animaciones de Aparición (Scroll Reveal)
-    const reveal = () => {
-        const reveals = document.querySelectorAll('.reveal');
-        reveals.forEach(el => {
-            const windowHeight = window.innerHeight;
-            const elementTop = el.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 100) {
-                el.classList.add('active');
-            }
-        });
-    };
-    window.addEventListener('scroll', reveal);
-    reveal();
-
-    // Contador de Números
-    const stats = document.querySelectorAll('.stat-number');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = +entry.target.getAttribute('data-target');
-                let count = 0;
-                const update = () => {
-                    const inc = target / 50;
-                    if (count < target) {
-                        count += inc;
-                        entry.target.innerText = Math.ceil(count);
-                        setTimeout(update, 35);
-                    } else {
-                        entry.target.innerText = target + "+";
-                    }
-                };
-                update();
-            }
-        });
-    }, { threshold: 1 });
-    stats.forEach(s => observer.observe(s));
 });
