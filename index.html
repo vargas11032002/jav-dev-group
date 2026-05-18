@@ -47,11 +47,31 @@
         <ul class="nav-links">
             <li><a href="#nosotros">Empresa</a></li>
             <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
             <li><a href="#clientes">Clientes</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#nosotros">Empresa</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="mobile-social">
+            <a href="https://www.instagram.com/javdevgroup" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/javdevgroup" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@javdevgroup" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
 
     <section id="inicio" style="padding:0; border-bottom: 1px solid var(--line);">
         <div class="hero-left">
@@ -68,7 +88,7 @@
                     Hablar con un experto
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#servicios" class="btn-outline">Ver servicios</a>
+                <a href="#portafolio" class="btn-outline">Ver portafolio</a>
             </div>
         </div>
         <div class="hero-right">
@@ -194,6 +214,151 @@
         </div>
     </section>
 
+    <section id="portafolio">
+        <div class="section-header">
+            <p class="section-label">Nuestro trabajo</p>
+            <h2 class="section-title">Portafolio de <strong>proyectos</strong></h2>
+        </div>
+
+        <div class="portfolio-filters">
+            <button class="pf-btn active" data-filter="all">Todos</button>
+            <button class="pf-btn" data-filter="web">Web</button>
+            <button class="pf-btn" data-filter="mobile">Móvil</button>
+            <button class="pf-btn" data-filter="ia">IA</button>
+            <button class="pf-btn" data-filter="saas">SaaS</button>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <article class="portfolio-card" data-cat="saas web">
+                <div class="pc-visual pc-visual--img">
+                    <img src="STOREOS.jpg" alt="StoreOS - Plataforma SaaS POS" class="pc-img">
+                    <span class="pc-status pc-status--dev">En desarrollo</span>
+                </div>
+                <div class="pc-body">
+                    <div class="pc-meta">
+                        <span class="pc-cat">SaaS · POS</span>
+                        <span class="pc-year">2026</span>
+                    </div>
+                    <h3 class="pc-title">StoreOS</h3>
+                    <p class="pc-desc">Plataforma SaaS multi-tenant de punto de venta e inventario. Funcionalidad offline, facturación electrónica DIAN, escaneo de códigos de barras y soporte multi-caja para negocios desde tiendas hasta supermercados.</p>
+                    <div class="pc-stack">
+                        <span>Next.js 14</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>Prisma</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card" data-cat="web">
+                <div class="pc-visual pc-visual--img">
+                    <img src="JAC.jpg" alt="JAC Garzón - Juntas de Acción Comunal" class="pc-img">
+                    <span class="pc-status pc-status--dev">En desarrollo</span>
+                </div>
+                <div class="pc-body">
+                    <div class="pc-meta">
+                        <span class="pc-cat">Web · Comunidad</span>
+                        <span class="pc-year">2026</span>
+                    </div>
+                    <h3 class="pc-title">JAC Garzón</h3>
+                    <p class="pc-desc">Plataforma digital para las Juntas de Acción Comunal de Garzón, Huila. Gestión de comunidades, directorio de juntas, trámites en línea y canal de comunicación entre líderes comunales y ciudadanos.</p>
+                    <div class="pc-stack">
+                        <span>Next.js 14</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card" data-cat="mobile">
+                <div class="pc-visual pc-visual--img">
+                    <img src="TOUT.jpeg" alt="Tout App - Marketplace de comidas" class="pc-img">
+                    <span class="pc-status pc-status--done">Completado</span>
+                </div>
+                <div class="pc-body">
+                    <div class="pc-meta">
+                        <span class="pc-cat">Marketplace · Foodtech</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Tout App</h3>
+                    <p class="pc-desc">Infraestructura móvil completa de marketplace de comidas construida desde cero. Tres roles de usuario (cliente, negocio, domiciliario), pagos con Wompi y sincronización en tiempo real.</p>
+                    <div class="pc-stack">
+                        <span>React Native</span>
+                        <span>Expo SDK 54</span>
+                        <span>Firebase</span>
+                        <span>Wompi</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card" data-cat="ia">
+                <div class="pc-visual pc-visual--img">
+                    <img src="BOT.jpeg" alt="Chatbot IA Asonet Colombia" class="pc-img">
+                    <span class="pc-status pc-status--done">Completado</span>
+                </div>
+                <div class="pc-body">
+                    <div class="pc-meta">
+                        <span class="pc-cat">IA · Chatbot · ISP</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Chatbot IA — Asonet</h3>
+                    <p class="pc-desc">Chatbot de WhatsApp con NLP integrado a la API de Wispro para consulta de datos del cliente, gestión de saldo y soporte técnico automatizado 24/7 para un ISP colombiano.</p>
+                    <div class="pc-stack">
+                        <span>Node.js</span>
+                        <span>WhatsApp API</span>
+                        <span>Wispro API</span>
+                        <span>NLP</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card" data-cat="web">
+                <div class="pc-visual pc-visual--img">
+                    <img src="ARRIERO.jpeg" alt="El Arriero - AgroVida Orgánica" class="pc-img">
+                    <span class="pc-status pc-status--done">Completado</span>
+                </div>
+                <div class="pc-body">
+                    <div class="pc-meta">
+                        <span class="pc-cat">Landing Page · Agro</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">El Arriero — AgroVida</h3>
+                    <p class="pc-desc">Landing page de alto impacto para producto de control de plagas. Estética dark premium, integración de pagos Wompi con notificaciones automáticas de pedidos a WhatsApp del negocio.</p>
+                    <div class="pc-stack">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Wompi</span>
+                        <span>WhatsApp API</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card" data-cat="web mobile">
+                <div class="pc-visual pc-visual--img pc-visual--split">
+                    <img src="SUNTECHAPP.jpeg" alt="Sun Tech App móvil" class="pc-img pc-img--left">
+                    <img src="SUNTECH.jpeg" alt="Sun Tech Colombia web" class="pc-img pc-img--right">
+                    <span class="pc-status pc-status--done">Completado</span>
+                </div>
+                <div class="pc-body">
+                    <div class="pc-meta">
+                        <span class="pc-cat">Web · Móvil · Energía</span>
+                        <span class="pc-year">2025</span>
+                    </div>
+                    <h3 class="pc-title">Sun Tech Colombia</h3>
+                    <p class="pc-desc">Aplicación móvil React Native y plataforma web corporativa para empresa de tecnología y energía solar. Diseño Mobile First, panel administrativo y catálogo de productos.</p>
+                    <div class="pc-stack">
+                        <span>React Native</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
     <section id="clientes">
         <div class="section-header">
             <p class="section-label">Aliados estratégicos</p>
@@ -275,6 +440,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="contact-social">
+                    <p class="contact-social-label">Síguenos</p>
+                    <div class="contact-social-links">
+                        <a href="https://www.instagram.com/javdevgroup" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>@javdevgroup</span>
+                        </a>
+                        <a href="https://www.facebook.com/javdevgroup" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>@javdevgroup</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@javdevgroup" target="_blank" class="social-link" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>@javdevgroup</span>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div>
                 <form class="contact-form" id="mainContactForm">
@@ -305,12 +488,19 @@
 
     <footer>
         <div class="footer-logo">J.A.V. <span>Dev Group</span></div>
-        <p>© 2025 J.A.V. Dev Group. Todos los derechos reservados.</p>
-        <ul class="footer-links">
-            <li><a href="#nosotros">Empresa</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <p>© 2026 J.A.V. Dev Group. Todos los derechos reservados.</p>
+        <div class="footer-right">
+            <ul class="footer-links">
+                <li><a href="#nosotros">Empresa</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/javdevgroup" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/javdevgroup" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@javdevgroup" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
